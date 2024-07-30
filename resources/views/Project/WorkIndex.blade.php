@@ -48,7 +48,7 @@
                   <img src="{{ asset('images/gallery/project-1.webp') }}" alt="" />
                   <div class="project_one-content">
                     <h5 class="project-one_title">
-                      <a href="project-detail.html">Award-Winning Photo</a>
+                      <a href="{{url('/project-detail')}}">Award-Winning Photo</a>
                     </h5>
                     <div class="project-one_designation">Photo Editing</div>
                   </div>
@@ -76,7 +76,7 @@
                   <img src="{{asset('images/gallery/project-2.webp') }}" alt="" />
                   <div class="project_one-content">
                     <h5 class="project-one_title">
-                      <a href="project-detail.html">Property Simplified</a>
+                      <a href="{{url('/project-detail')}}">Property Simplified</a>
                     </h5>
                     <div class="project-one_designation">Photo Editing</div>
                   </div>
@@ -88,7 +88,7 @@
                         the strategists with a lot of thought and analysis
                         come true!
                       </div>
-                      <a class="project_one-plus fa-solid fa-plus fa-fw" href="project-detail.html"></a>
+                      <a class="project_one-plus fa-solid fa-plus fa-fw" href="{{url('/project-detail')}}"></a>
                     </div>
                   </div>
                 </div>
@@ -102,7 +102,7 @@
                   <img src="{{asset('images/gallery/project-3.webp') }}" alt="" />
                   <div class="project_one-content">
                     <h5 class="project-one_title">
-                      <a href="project-detail.html">Deliveries Made Easy</a>
+                      <a href="{{url('/project-detail')}}">Deliveries Made Easy</a>
                     </h5>
                     <div class="project-one_designation">Food Delivery</div>
                   </div>
@@ -114,7 +114,7 @@
                         the strategists with a lot of thought and analysis
                         come true!
                       </div>
-                      <a class="project_one-plus fa-solid fa-plus fa-fw" href="project-detail.html"></a>
+                      <a class="project_one-plus fa-solid fa-plus fa-fw" href="{{url('/project-detail')}}"></a>
                     </div>
                   </div>
                 </div>
@@ -128,7 +128,7 @@
                   <img src="{{asset('images/gallery/project-4.webp') }}" alt="" />
                   <div class="project_one-content">
                     <h5 class="project-one_title">
-                      <a href="project-detail.html">Collection Management</a>
+                      <a href="{{url('/project-detail')}}">Collection Management</a>
                     </h5>
                     <div class="project-one_designation">Web Application</div>
                   </div>
@@ -140,7 +140,7 @@
                         the strategists with a lot of thought and analysis
                         come true!
                       </div>
-                      <a class="project_one-plus fa-solid fa-plus fa-fw" href="project-detail.html"></a>
+                      <a class="project_one-plus fa-solid fa-plus fa-fw" href="{{url('/project-detail')}}"></a>
                     </div>
                   </div>
                 </div>
@@ -154,7 +154,7 @@
                   <img src="{{asset('images/gallery/project-5.webp') }}" alt="" />
                   <div class="project_one-content">
                     <h5 class="project-one_title">
-                      <a href="project-detail.html">Improvement Company</a>
+                      <a href="{{url('/project-detail')}}">Improvement Company</a>
                     </h5>
                     <div class="project-one_designation">Web Application</div>
                   </div>
@@ -166,7 +166,7 @@
                         the strategists with a lot of thought and analysis
                         come true!
                       </div>
-                      <a class="project_one-plus fa-solid fa-plus fa-fw" href="project-detail.html"></a>
+                      <a class="project_one-plus fa-solid fa-plus fa-fw" href="{{url('/project-detail')}}"></a>
                     </div>
                   </div>
                 </div>
@@ -180,7 +180,7 @@
                   <img src="{{asset('images/gallery/project-6.webp') }}" alt="" />
                   <div class="project_one-content">
                     <h5 class="project-one_title">
-                      <a href="project-detail.html">iOS Application</a>
+                      <a href="{{url('/project-detail')}}">iOS Application</a>
                     </h5>
                     <div class="project-one_designation">Admin Dashboard</div>
                   </div>
@@ -192,7 +192,7 @@
                         the strategists with a lot of thought and analysis
                         come true!
                       </div>
-                      <a class="project_one-plus fa-solid fa-plus fa-fw" href="project-detail.html"></a>
+                      <a class="project_one-plus fa-solid fa-plus fa-fw" href="{{url('/project-detail')}}"></a>
                     </div>
                   </div>
                 </div>
@@ -206,7 +206,7 @@
                   <img src="{{asset('images/gallery/project-7.webp') }}" alt="" />
                   <div class="project_one-content">
                     <h5 class="project-one_title">
-                      <a href="project-detail.html">HandyMan app</a>
+                      <a href="{{url('/project-detail')}}">HandyMan app</a>
                     </h5>
                     <div class="project-one_designation">Web App</div>
                   </div>
@@ -218,7 +218,7 @@
                         the strategists with a lot of thought and analysis
                         come true!
                       </div>
-                      <a class="project_one-plus fa-solid fa-plus fa-fw" href="project-detail.html"></a>
+                      <a class="project_one-plus fa-solid fa-plus fa-fw" href="{{url('/project-detail')}}"></a>
                     </div>
                   </div>
                 </div>
@@ -232,7 +232,7 @@
                   <img src="{{asset('images/gallery/project-8.webp') }}" alt="" />
                   <div class="project_one-content">
                     <h5 class="project-one_title">
-                      <a href="project-detail.html">Property Simplified</a>
+                      <a href="{{url('/project-detail')}}">Property Simplified</a>
                     </h5>
                     <div class="project-one_designation">Photo Editing</div>
                   </div>
@@ -244,7 +244,7 @@
                         the strategists with a lot of thought and analysis
                         come true!
                       </div>
-                      <a class="project_one-plus fa-solid fa-plus fa-fw" href="project-detail.html"></a>
+                      <a class="project_one-plus fa-solid fa-plus fa-fw" href="{{url('/project-detail')}}"></a>
                     </div>
                   </div>
                 </div>

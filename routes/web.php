@@ -78,3 +78,6 @@ Route::get('/photography', function () { return view('Photography.Photo');});
 Route::get('/creatives', function () { return view('Photography.Creative.Photo');});
 Route::get('/ui-uxDesign', function () { return view('Designs.UI.UI');});
 Route::get('/NAS', function () { return view('NAS.Network');});
+Route::get('/blog', function () { return view('Blogs.Blog');});
+Route::get('/blog-detail', function () { return view('Blogs.BlogDetail.Blogdetail');});
+Route::get('/project-detail', function () { return view('Project.ProjectDetail.ProjectDetail');});

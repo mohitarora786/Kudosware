@@ -243,10 +243,19 @@
 
                   </li>
                   @if(request()->is('admin.*') || request()->is('admin.laravel.bytecraftstudios.in/*'))
+                  @php
+                  $currentHost = request()->getHost();
+                  if ($currentHost === 'admin.laravel.bytecraftstudios.in') {
+                  // Redirect to the desired URL
+                  header('Location: ' . url('/admin/login'));
+                  exit;
+                  }
+                  @endphp
                   <li>
                     <a href="{{ url('/admin/login') }}">Admin</a>
                   </li>
                   @endif
+
                 </ul>
                 </li>
 
@@ -461,7 +470,19 @@
                   <a href="{{url('/contact')}}">Contact</a>
                 </li>
 
+                <li>
+                  <a href="{{url('/blog')}}">Blog</a>
+                </li>
+
                 @if(request()->is('admin.*') || request()->is('admin.laravel.bytecraftstudios.in/*'))
+                @php
+                $currentHost = request()->getHost();
+                if ($currentHost === 'admin.laravel.bytecraftstudios.in') {
+                // Redirect to the desired URL
+                header('Location: ' . url('/admin/login'));
+                exit;
+                }
+                @endphp
                 <li>
                   <a href="{{ url('/admin/login') }}">Admin</a>
                 </li>
@@ -512,14 +533,14 @@
           </ul>
           </div> -->
 
-          <div class="button-box">
-    <a class="btn-style-three get-btn theme-btn btn-item" href="{{ url('/contact?subject=quote#contact-form') }}">
-        <div class="btn-wrap">
-            <span class="text-one">Get a quote now</span>
-            <span class="text-two">Get a quote now</span>
-        </div>
-    </a>
-</div>
+              <div class="button-box">
+                <a class="btn-style-three get-btn theme-btn btn-item" href="{{ url('/contact?subject=quote#contact-form') }}">
+                  <div class="btn-wrap">
+                    <span class="text-one">Get a quote now</span>
+                    <span class="text-two">Get a quote now</span>
+                  </div>
+                </a>
+              </div>
 
 
               <!-- Mobile Navigation Toggler -->
