@@ -41,9 +41,9 @@ class JobapplicantsOverview extends BaseWidget
         ->count();
 
     return [
-        Stat::make('Total Accepted Applications', $acceptedTotal),
-        Stat::make('Total Pending Applications', $pendingTotal),
-        Stat::make('Total Rejected Applications', $rejectedTotal),
+        // Stat::make('Total Accepted Applications', $acceptedTotal),
+        // Stat::make('Total Pending Applications', $pendingTotal),
+        // Stat::make('Total Rejected Applications', $rejectedTotal),
 
         // Stat::make("Accepted Applications $currentMonth", $acceptedThisMonth),
         // // Stat::make("Pending Applications $currentMonth", $pendingThisMonth),

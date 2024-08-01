@@ -5,12 +5,18 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\JobappointmentResource\Pages;
 use App\Filament\Resources\JobappointmentResource\RelationManagers;
 use App\Models\Jobappointment;
+use Filament\Actions\ActionGroup;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ViewAction;
 use Filament\Forms;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Filament\Navigation\NavigationItem;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
 use Filament\Tables\Columns\BadgeColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\SelectColumn;
@@ -23,7 +29,7 @@ class JobappointmentResource extends Resource
 {
     protected static ?string $model = Jobappointment::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-briefcase'; // Updated icon
+    protected static ?string $navigationIcon = 'heroicon-o-document'; // Updated icon
 
     protected static ?int $navigationSort = 2; // Set the priority for navigation
     public static function form(Form $form): Form
@@ -50,34 +56,24 @@ class JobappointmentResource extends Resource
     
                         // Second Section: Job Details
                         Section::make('Job Details')
-                            ->schema([
-                                Forms\Components\TextInput::make('subject')
-                                    ->label('Subject')
-                                    ->required(),
-                                Forms\Components\TextInput::make('job_role')
-                                    ->label('Job Role')
-                                    ->required(),
-                                // Forms\Components\ToggleButtons::make('status')
-                                //     ->label('Status')
-                                //     ->options([
-                                //         'pending' => 'Pending',
-                                //         'requested' => 'Requested',
-                                //         'accepted' => 'Accepted',
-                                //     ])
-                                //     ->colors([
-                                //         'pending' => 'info',
-                                //         'requested' => 'danger',
-                                //         'accepted' => 'success',
-                                //     ])
-                                //     ->icons([
-                                //         'pending' => 'heroicon-o-user',
-                                //         'requested' => 'heroicon-o-user',
-                                //         'accepted' => 'heroicon-o-user',
-                                //     ])
-                                //     ->inline() // Ensure the buttons are displayed inline
-                                //     ->required(),
-                            ])
-                            ->columns(3), // Three columns layout
+                        ->schema([
+                            Forms\Components\Select::make('job_id')
+                                ->label('Job Designation')
+                                ->relationship('job', 'job_title')
+                                ->reactive()
+                                ->required()
+                                ->afterStateUpdated(function (callable $set, $state) {
+                                    $job = \App\Models\Job::find($state);
+                                    $set('job_role', $job ? $job->job_title : null);
+                                }),
+                            Forms\Components\TextInput::make('job_role')
+                                ->label('Job Role')
+                                ->required(),
+                            Forms\Components\TextInput::make('subject')
+                                ->label('Subject')
+                                ->required(),
+                        ])
+                        ->columns(3), // Three columns layout
     
                         // Third Section: Document Upload
                         Section::make('Document Upload')
@@ -92,6 +88,8 @@ class JobappointmentResource extends Resource
             ]);
     }
     
+    
+    
 
 
     public static function table(Table $table): Table
@@ -101,27 +99,27 @@ class JobappointmentResource extends Resource
                 TextColumn::make('name')
                     ->label('Full Name')
                     ->searchable(),
-    
+                
                 TextColumn::make('email')
                     ->label('Email')
-                    
                     ->searchable(),
-    
+                    TextColumn::make('job_role')
+                    ->label('Job Role')
+                    ->searchable(),
+                
                 TextColumn::make('phone')
                     ->label('Phone Number')
-                    
                     ->searchable(),
-    
-                    Tables\Columns\SelectColumn::make('status')
+                
+                SelectColumn::make('status')
                     ->label('Status')
                     ->options([
                         'pending' => 'Pending',
                         'accepted' => 'Accepted',
                         'rejected' => 'Rejected',
                     ])
-                    ->default('Pending')
-                    ,
-    
+                    ->default('Pending'),
+                
                 ImageColumn::make('image')
                     ->label('Cv / Resume')
                     ->disk('public') // Ensure this matches your disk configuration
@@ -131,19 +129,15 @@ class JobappointmentResource extends Resource
             ])
             ->filters([
                 // Add filters if needed
-                //
             ])
             ->actions([
                 Tables\Actions\ActionGroup::make([
-                    Tables\Actions\ViewAction::make(), // View action
-                    Tables\Actions\EditAction::make(), // Edit action
-                    Tables\Actions\DeleteAction::make(), // Delete action
-                ]),
-            ])
+                Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
+                Tables\Actions\DeleteAction::make()
+            ])])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(), // Bulk delete action
-                ]),
+                Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
     public static function getRelations(): array

@@ -44,13 +44,13 @@
                         <div class="service-block_two-overlay-two">
                           <div class="service-two_overlay-content">
                             <h5 class="service-block_two-title">
-                              <a href="#"> Web & Software Development</a>
+                              <a href="{{url('/webdevelopment')}}"> Web & Software Development</a>
                             </h5>
                             <div class="service-block_two-text">
                               Web & software development involves creating applications and websites, ranging from
                               simple web pages to complex software solutions.
                             </div>
-                            <a class="service-block_two-more" href="./webDevelopment.html">Read more</a>
+                            <a class="service-block_two-more" href="{{url('/webdevelopment')}}">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -74,13 +74,13 @@
                         <div class="service-block_two-overlay-two">
                           <div class="service-two_overlay-content">
                             <h5 class="service-block_two-title">
-                              <a href="#">Digital Marketing</a>
+                              <a href="{{url('/digitalmarketing')}}">Digital Marketing</a>
                             </h5>
                             <div class="service-block_two-text">
                               Digital marketing encompasses strategies and techniques used to promote products,
                               services, or brands online, leveraging platforms.
                             </div>
-                            <a class="service-block_two-more" href="./DigitalMarketing.html">Read more</a>
+                            <a class="service-block_two-more" href="{{url('/digitalmarketing')}}">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -103,13 +103,13 @@
                         <div class="service-block_two-overlay-two">
                           <div class="service-two_overlay-content">
                             <h5 class="service-block_two-title">
-                              <a href="#">IT Support & Consulting</a>
+                              <a href="{{url('/itSupport')}}">IT Support & Consulting</a>
                             </h5>
                             <div class="service-block_two-text">
                               IT support & consulting provides expert guidance and assistance in managing,
                               troubleshooting, and optimizing technology infrastructure and systems.
                             </div>
-                            <a class="service-block_two-more" href="./ItSupport&Consulting.html">Read more</a>
+                            <a class="service-block_two-more" href="{{url('/itSupport')}}">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -133,13 +133,13 @@
                         <div class="service-block_two-overlay-two">
                           <div class="service-two_overlay-content">
                             <h5 class="service-block_two-title">
-                              <a href="#">Data Services</a>
+                              <a href="{{url('/dataService')}}">Data Services</a>
                             </h5>
                             <div class="service-block_two-text">
                               Data services involve managing, analyzing, and optimizing data to provide valuable
                               insights and support informed decision-making for businesses and organizations.
                             </div>
-                            <a class="service-block_two-more" href="./DataServices.html">Read more</a>
+                            <a class="service-block_two-more" href="{{url('/dataService')}}">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -163,13 +163,13 @@
                         <div class="service-block_two-overlay-two">
                           <div class="service-two_overlay-content">
                             <h5 class="service-block_two-title">
-                              <a href="#">Network-attached storage (NAS)</a>
+                              <a href="{{url('/NAS')}}">Network-attached storage (NAS)</a>
                             </h5>
                             <div class="service-block_two-text">
                               Network-attached storage (NAS) refers to a dedicated file storage device that provides
                               centralized data access and management for multiple users and devices within a network.
                             </div>
-                            <a class="service-block_two-more" href="./NAS.html">Read more</a>
+                            <a class="service-block_two-more" href="{{url('/NAS')}}">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -193,13 +193,13 @@
                         <div class="service-block_two-overlay-two">
                           <div class="service-two_overlay-content">
                             <h5 class="service-block_two-title">
-                              <a href="#">Cybersecurity</a>
+                              <a href="{{url('/cybersecurity')}}">Cybersecurity</a>
                             </h5>
                             <div class="service-block_two-text">
                               Cybersecurity focuses on protecting computer systems, networks, and data from unauthorized
                               access, attacks, and breaches through preventive measures, detection techniques.
                             </div>
-                            <a class="service-block_two-more" href="./Cybersecurity.html">Read more</a>
+                            <a class="service-block_two-more" href="{{url('/cybersecurity')}}">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -262,13 +262,13 @@
                         <div class="service-block_two-overlay-two">
                           <div class="service-two_overlay-content">
                             <h5 class="service-block_two-title">
-                              <a href="#">IT Governance & Compliance</a>
+                              <a href="{{url('/Itgoverance')}}">IT Governance & Compliance</a>
                             </h5>
                             <div class="service-block_two-text">
                               IT governance & compliance involves establishing and adhering to policies, procedures, and
                               standards to ensure that IT systems and operations meet legal, regulatory.
                             </div>
-                            <a class="service-block_two-more" href="./IT Governance&Compliance.html">Read more</a>
+                            <a class="service-block_two-more" href="{{url('/Itgoverance')}}">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -292,13 +292,13 @@
                         <div class="service-block_two-overlay-two">
                           <div class="service-two_overlay-content">
                             <h5 class="service-block_two-title">
-                              <a href="#">Additional Services</a>
+                              <a href="{{url('/AdditionalServices')}}">Additional Services</a>
                             </h5>
                             <div class="service-block_two-text">
                               Additional services for IT services encompass supplementary offerings beyond core IT
                               support, such as cybersecurity audits, cloud migration assistance, IT strategy consulting.
                             </div>
-                            <a class="service-block_two-more" href="./AdditionalServices.html">Read more</a>
+                            <a class="service-block_two-more" href="{{url('/AdditionalServices')}}">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -326,14 +326,14 @@
                         <div class="service-block_two-overlay-two">
                           <div class="service-two_overlay-content">
                             <h5 class="service-block_two-title">
-                              <a href="#">Pre-Production Services</a>
+                              <a href="{{url('/preproduction')}}">Pre-Production Services</a>
                             </h5>
                             <div class="service-block_two-text">
                               Pre-production services involve planning and preparation activities in creative projects,
                               such as filmmaking or software development, including scriptwriting, storyboarding,
                               casting.
                             </div>
-                            <a class="service-block_two-more" href="./pre-production-services.html">Read more</a>
+                            <a class="service-block_two-more" href="{{url('/preproduction')}}">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -357,13 +357,13 @@
                         <div class="service-block_two-overlay-two">
                           <div class="service-two_overlay-content">
                             <h5 class="service-block_two-title">
-                              <a href="#">Production Services</a>
+                              <a href="{{url('/production')}}">Production Services</a>
                             </h5>
                             <div class="service-block_two-text">
                               Production services in film refer to the logistical and technical support provided during
                               the filming phase, including location scouting, equipment rental, crew hiring.
                             </div>
-                            <a class="service-block_two-more" href="./production-services.html">Read more</a>
+                            <a class="service-block_two-more" href="{{url('/production')}}">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -387,13 +387,13 @@
                         <div class="service-block_two-overlay-two">
                           <div class="service-two_overlay-content">
                             <h5 class="service-block_two-title">
-                              <a href="#">Post-Production Services</a>
+                              <a href="{{url('/postproduction')}}">Post-Production Services</a>
                             </h5>
                             <div class="service-block_two-text">
                               Post-production services in film involve editing, sound design, visual effects, and color
                               grading processes that refine raw footage into a polished final product.
                             </div>
-                            <a class="service-block_two-more" href="./post-production-services.html">Read more</a>
+                            <a class="service-block_two-more" href="{{url('/postproduction')}}">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -417,13 +417,13 @@
                         <div class="service-block_two-overlay-two">
                           <div class="service-two_overlay-content">
                             <h5 class="service-block_two-title">
-                              <a href="#">Distribution and Marketing Services</a>
+                              <a href="{{url('/marketing')}}">Distribution and Marketing Services</a>
                             </h5>
                             <div class="service-block_two-text">
                               Distribution and marketing services in film encompass strategies and activities aimed at
                               promoting and distributing movies to audiences worldwide.
                             </div>
-                            <a class="service-block_two-more" href="./distribution-and-marketing-services.html">Read
+                            <a class="service-block_two-more" href="{{url('/marketing')}}">Read
                               more</a>
                           </div>
                         </div>
@@ -448,13 +448,13 @@
                         <div class="service-block_two-overlay-two">
                           <div class="service-two_overlay-content">
                             <h5 class="service-block_two-title">
-                              <a href="#">Video Production Services</a>
+                              <a href="{{url('/video')}}">Video Production Services</a>
                             </h5>
                             <div class="service-block_two-text">
                               Video production services in film involve the creation of visual content, encompassing
                               filming, editing, and post-production processes.
                             </div>
-                            <a class="service-block_two-more" href="./video-production-services.html">Read more</a>
+                            <a class="service-block_two-more" href="{{url('/video')}}">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -477,13 +477,13 @@
                         <div class="service-block_two-overlay-two">
                           <div class="service-two_overlay-content">
                             <h5 class="service-block_two-title">
-                              <a href="#">Photography Services</a>
+                              <a href="{{url('/photography')}}">Photography Services</a>
                             </h5>
                             <div class="service-block_two-text">
                               Photography services in film encompass capturing high-quality images during production,
                               including promotional stills, behind-the-scenes shots, and portraits of cast and crew.
                             </div>
-                            <a class="service-block_two-more" href="./photography-services.html">Read more</a>
+                            <a class="service-block_two-more" href="{{url('/photography')}}">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -507,13 +507,13 @@
                         <div class="service-block_two-overlay-two">
                           <div class="service-two_overlay-content">
                             <h5 class="service-block_two-title">
-                              <a href="#">Creative and Post-Production Services</a>
+                              <a href="{{url('/creatives')}}">Creative and Post-Production Services</a>
                             </h5>
                             <div class="service-block_two-text">
                               Creative and post-production services in film involve the artistic and technical processes
                               that refine and enhance visual content after filming.
                             </div>
-                            <a class="service-block_two-more" href="./creative-post-production-services.html">Read
+                            <a class="service-block_two-more" href="{{url('/creatives')}}">Read
                               more</a>
                           </div>
                         </div>
@@ -537,13 +537,13 @@
                         <div class="service-block_two-overlay-two">
                           <div class="service-two_overlay-content">
                             <h5 class="service-block_two-title">
-                              <a href="#">Additional Services</a>
+                              <a href="{{url('/AdditionalServices')}}">Additional Services</a>
                             </h5>
                             <div class="service-block_two-text">
                               Additional services in film encompass specialized offerings beyond core production and
                               post-production, such as location scouting, casting assistance, equipment rental.
                             </div>
-                            <a class="service-block_two-more" href="./additional-services-film.html">Read more</a>
+                            <a class="service-block_two-more" href="{{url('/AdditionalServices')}}">Read more</a>
                           </div>
                         </div>
                       </div>

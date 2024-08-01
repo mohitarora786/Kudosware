@@ -22,8 +22,7 @@ class ListJobappointments extends ListRecords
     protected function getHeaderWidgets(): array
     {
         return[
-        JobapplicantOverview::class,
-        JobapplicantsOverview::class
+        JobapplicantOverview::class
         ];
     }
     public function getTabs(): array

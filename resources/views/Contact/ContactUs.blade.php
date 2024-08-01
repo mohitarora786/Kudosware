@@ -122,7 +122,7 @@
                 <!-- File Upload Field (only for Job Applications) -->
                 <div id="file-upload" class="col-lg-6 col-md-12 col-sm-12 form-group hide">
                     <label for="file">Choose a file</label>
-                    <input type="file" name="file" id="file">
+                    <input type="file" name="image" id="image">
                 </div>
 
                 <!-- Job Role Field (only for Job Applications) -->

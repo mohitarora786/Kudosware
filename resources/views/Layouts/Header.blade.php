@@ -1,3 +1,15 @@
+<style>
+  /* Add your CSS here */
+  .toc-link.active {
+    color: #007bff;
+    /* Highlight color */
+    font-weight: bold;
+  }
+
+  .toc-link {
+    transition: color 0.3s ease;
+  }
+</style>
 <header class="main-header header-style-two bg-dark">
   <!-- Header Top -->
   <div class="header-top_two border-bottom">
@@ -241,215 +253,215 @@
                       </li>
 
 
-                  </li>
-                  @if(request()->is('admin.*') || request()->is('admin.laravel.bytecraftstudios.in/*'))
-                  @php
-                  $currentHost = request()->getHost();
-                  if ($currentHost === 'admin.laravel.bytecraftstudios.in') {
-                  // Redirect to the desired URL
-                  header('Location: ' . url('/admin/login'));
-                  exit;
-                  }
-                  @endphp
-                  <li>
-                    <a href="{{ url('/admin/login') }}">Admin</a>
-                  </li>
-                  @endif
+                      @if(request()->is('admin.*') || request()->is('admin.laravel.bytecraftstudios.in/*'))
+                      @php
+                      $currentHost = request()->getHost();
+                      if ($currentHost === 'admin.laravel.bytecraftstudios.in') {
+                      // Redirect to the desired URL
+                      echo '<script>
+                        window.location.href = "' . url('/admin/login') . '";
+                      </script>';
+                      exit;
+                      }
+                      @endphp
+                      @endif
 
-                </ul>
-                </li>
-
-                <style>
-                  p.discription-mobile {
-                    line-height: 18px;
-                  }
-                </style>
-
-                <li class="dropdown-1 remove-class" style='align-items: center;'>
-                  <a class="mega-drop" href="{{url('/service')}}">Services</a>
-
-                  <nav class="cd-dropdown">
-                    <!-- <h2>Title</h2> -->
-                    <!-- <a href="#0" class="cd-close">Close</a> -->
-
-                    <ul class="cd-dropdown-content">
-
-
-                      <li class="has-children ">
-                        <a href="# " class="option-1" id="active-tab">Services </a>
-
-                        <p class="tab-discription">Offering diverse, essential business solutions globally</p>
-
-
-                        <ul class="cd-dropdown-icons is-hidden">
-
-                          <li class="see-all"><a href="{{url('/service')}}">Browse Services</a></li>
-                          <li>
-                            <a class="cd-dropdown-item item-1" href="{{url('/service#prod-mission')}}">
-                              <h3 class="icon-name-M">IT Services</h3>
-                              <p> IT solutions for seamless operations.</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-2" href="{{url('/service#prod-winner')}}">
-                              <h3 class="icon-name-M">Film Production Services</h3>
-                              <p>Facilitating every Filmmaking need seamlessly</p>
-                            </a>
-                          </li>
-
-                        </ul>
-                      </li> <!-- .has-children -->
-
-                      <li class="has-children">
-                        <a href="#" class='option-1'>IT Services</a>
-                        <p class="tab-discription"> IT solutions for seamless operations.</p>
-
-                        <ul class="cd-dropdown-icons is-hidden">
-
-                          <li class="see-all"><a href="{{url('/service#prod-mission')}}">Browse IT Services</a></li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-1" href="{{url('/webdevelopment')}}">
-                              <h3 class="icon-name-M">Web & Software Development</h3>
-                              <p>Innovating digital solutions with expert precision</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-2" href="{{url('/digitalmarketing')}}">
-                              <h3 class="icon-name-M">Digital Marketing</h3>
-                              <p>Promoting brands online with strategic precision</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-3" href="{{url('/itSupport')}}">
-                              <h3 class="icon-name-M" class="icon-name-M">IT Support & Consulting</h3>
-                              <p>Managing tech needs with expert guidance</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-4" href="{{url('/dataService')}}">
-                              <h3 class="icon-name-M">Data Services</h3>
-                              <p>Managing and analyzing digital information efficiently</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-5" href="{{url('/NAS')}}">
-                              <h3 class="icon-name-M">Network Attached Storage NAS</h3>
-                              <p>Centralized data storage for network convenience</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-6" href="{{url('/cybersecurity')}}">
-                              <h3 class="icon-name-M">Cyber Security</h3>
-                              <p>Protecting digital systems from threats</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-8" href="{{url('/Itgoverance')}}">
-                              <h3 class="icon-name-M">IT Governance & Compilance</h3>
-                              <p>Regulatory Adherence and organizational alignment</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-9" href="{{url('/AdditionalServices')}}">
-                              <h3 class="icon-name-M">Additional Services</h3>
-                              <p>Enhancing capabilities with specialized solutions</p>
-                            </a>
-                          </li>
-
-
-
-                        </ul>
-                      </li>
-
-                      <li class="has-children">
-                        <a href="#" class="option-1">Film Production Services</a>
-                        <p class="tab-discription">Facilitating every Filmmaking need seamlessly</p>
-                        <ul class="cd-dropdown-icons is-hidden">
-
-                          <li class="see-all"><a href="{{url('/service#prod-winner')}}">Browse Film Services</a></li>
-                          <li>
-                            <a class="cd-dropdown-item item-1" href="{{url('/preproduction')}}">
-                              <h3 class="icon-name-M">Pre-Production Services</h3>
-                              <p>Planning and preparing for creative projects</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-2" href="{{url('/production')}}">
-                              <h3 class="icon-name-M">Production Services</h3>
-                              <p>Executing creative vision with logistical precision</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-3" href="{{url('/postproduction')}}">
-                              <h3 class="icon-name-M">Post-Production Services</h3>
-                              <p>Refining and enhancing creative content seamlessly</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-4" href="{{url('/marketing')}}">
-                              <h3 class="icon-name-M">Distribution & Marketing Services</h3>
-                              <p>Promoting and delivering content effectively worldwide</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-6" href="{{url('/video')}}">
-                              <h3 class="icon-name-M">Video Production Services</h3>
-                              <p>Crafting visual stories with professional expertise</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-7" href="{{url('/photography')}}">
-                              <h3 class="icon-name-M">Photography Services</h3>
-                              <p>Capturing moments with artistic precision</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-8" href="{{url('/creatives')}}">
-                              <h3 class="icon-name-M">Creative & Post Production Services</h3>
-                              <p>Enhancing and finalizing creative projects professionally</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-5" href="{{url('/video')}}">
-                              <h3 class="icon-name-M">Additional Services</h3>
-                              <p>Tailored solutions for diverse client needs</p>
-                            </a>
-                          </li>
-
-                        </ul>
+                      <li>
+                        <a href="{{ url('/admin/login') }}">Admin</a>
                       </li>
 
 
-                      <li class="has-children">
-                        <a href="#" class="option-1">Projects</a>
-                        <p class="tab-discription">Creative endeavors in IT and film.</p>
-                        <ul class="cd-dropdown-icons is-hidden">
+                      <style>
+                        p.discription-mobile {
+                          line-height: 18px;
+                        }
+                      </style>
 
-                          <li class="see-all"><a href="{{url('/project')}}">Browse Services</a></li>
-                          <li>
-                            <a class="cd-dropdown-item item-1" href="{{url('/project')}}">
-                              <h3 class="icon-name-M">Portfolio</h3>
-                              <p>Showcase of IT and film works</p>
-                            </a>
-                          </li>
+                      <li class="dropdown-1 remove-class" style='align-items: center;'>
+                        <a class="mega-drop" href="{{url('/service')}}">Services</a>
 
-                          <!-- <li>
+                        <nav class="cd-dropdown">
+                          <!-- <h2>Title</h2> -->
+                          <!-- <a href="#0" class="cd-close">Close</a> -->
+
+                          <ul class="cd-dropdown-content">
+
+
+                            <li class="has-children ">
+                              <a href="# " class="option-1" id="active-tab">Services </a>
+
+                              <p class="tab-discription">Offering diverse, essential business solutions globally</p>
+
+
+                              <ul class="cd-dropdown-icons is-hidden">
+
+                                <li class="see-all"><a href="{{url('/service')}}">Browse Services</a></li>
+                                <li>
+                                  <a class="cd-dropdown-item item-1" href="{{url('/service#prod-mission')}}">
+                                    <h3 class="icon-name-M">IT Services</h3>
+                                    <p> IT solutions for seamless operations.</p>
+                                  </a>
+                                </li>
+
+                                <li>
+                                  <a class="cd-dropdown-item item-2" href="{{url('/service#prod-winner')}}">
+                                    <h3 class="icon-name-M">Film Production Services</h3>
+                                    <p>Facilitating every Filmmaking need seamlessly</p>
+                                  </a>
+                                </li>
+
+                              </ul>
+                            </li> <!-- .has-children -->
+
+                            <li class="has-children">
+                              <a href="#" class='option-1'>IT Services</a>
+                              <p class="tab-discription"> IT solutions for seamless operations.</p>
+
+                              <ul class="cd-dropdown-icons is-hidden">
+
+                                <li class="see-all"><a href="{{url('/service#prod-mission')}}">Browse IT Services</a></li>
+
+                                <li>
+                                  <a class="cd-dropdown-item item-1" href="{{url('/webdevelopment')}}">
+                                    <h3 class="icon-name-M">Web & Software Development</h3>
+                                    <p>Innovating digital solutions with expert precision</p>
+                                  </a>
+                                </li>
+
+                                <li>
+                                  <a class="cd-dropdown-item item-2" href="{{url('/digitalmarketing')}}">
+                                    <h3 class="icon-name-M">Digital Marketing</h3>
+                                    <p>Promoting brands online with strategic precision</p>
+                                  </a>
+                                </li>
+
+                                <li>
+                                  <a class="cd-dropdown-item item-3" href="{{url('/itSupport')}}">
+                                    <h3 class="icon-name-M" class="icon-name-M">IT Support & Consulting</h3>
+                                    <p>Managing tech needs with expert guidance</p>
+                                  </a>
+                                </li>
+
+                                <li>
+                                  <a class="cd-dropdown-item item-4" href="{{url('/dataService')}}">
+                                    <h3 class="icon-name-M">Data Services</h3>
+                                    <p>Managing and analyzing digital information efficiently</p>
+                                  </a>
+                                </li>
+
+                                <li>
+                                  <a class="cd-dropdown-item item-5" href="{{url('/NAS')}}">
+                                    <h3 class="icon-name-M">Network Attached Storage NAS</h3>
+                                    <p>Centralized data storage for network convenience</p>
+                                  </a>
+                                </li>
+
+                                <li>
+                                  <a class="cd-dropdown-item item-6" href="{{url('/cybersecurity')}}">
+                                    <h3 class="icon-name-M">Cyber Security</h3>
+                                    <p>Protecting digital systems from threats</p>
+                                  </a>
+                                </li>
+
+                                <li>
+                                  <a class="cd-dropdown-item item-8" href="{{url('/Itgoverance')}}">
+                                    <h3 class="icon-name-M">IT Governance & Compilance</h3>
+                                    <p>Regulatory Adherence and organizational alignment</p>
+                                  </a>
+                                </li>
+
+                                <li>
+                                  <a class="cd-dropdown-item item-9" href="{{url('/AdditionalServices')}}">
+                                    <h3 class="icon-name-M">Additional Services</h3>
+                                    <p>Enhancing capabilities with specialized solutions</p>
+                                  </a>
+                                </li>
+
+
+
+                              </ul>
+                            </li>
+
+                            <li class="has-children">
+                              <a href="#" class="option-1">Film Production Services</a>
+                              <p class="tab-discription">Facilitating every Filmmaking need seamlessly</p>
+                              <ul class="cd-dropdown-icons is-hidden">
+
+                                <li class="see-all"><a href="{{url('/service#prod-winner')}}">Browse Film Services</a></li>
+                                <li>
+                                  <a class="cd-dropdown-item item-1" href="{{url('/preproduction')}}">
+                                    <h3 class="icon-name-M">Pre-Production Services</h3>
+                                    <p>Planning and preparing for creative projects</p>
+                                  </a>
+                                </li>
+
+                                <li>
+                                  <a class="cd-dropdown-item item-2" href="{{url('/production')}}">
+                                    <h3 class="icon-name-M">Production Services</h3>
+                                    <p>Executing creative vision with logistical precision</p>
+                                  </a>
+                                </li>
+
+                                <li>
+                                  <a class="cd-dropdown-item item-3" href="{{url('/postproduction')}}">
+                                    <h3 class="icon-name-M">Post-Production Services</h3>
+                                    <p>Refining and enhancing creative content seamlessly</p>
+                                  </a>
+                                </li>
+
+                                <li>
+                                  <a class="cd-dropdown-item item-4" href="{{url('/marketing')}}">
+                                    <h3 class="icon-name-M">Distribution & Marketing Services</h3>
+                                    <p>Promoting and delivering content effectively worldwide</p>
+                                  </a>
+                                </li>
+
+                                <li>
+                                  <a class="cd-dropdown-item item-6" href="{{url('/video')}}">
+                                    <h3 class="icon-name-M">Video Production Services</h3>
+                                    <p>Crafting visual stories with professional expertise</p>
+                                  </a>
+                                </li>
+
+                                <li>
+                                  <a class="cd-dropdown-item item-7" href="{{url('/photography')}}">
+                                    <h3 class="icon-name-M">Photography Services</h3>
+                                    <p>Capturing moments with artistic precision</p>
+                                  </a>
+                                </li>
+
+                                <li>
+                                  <a class="cd-dropdown-item item-8" href="{{url('/creatives')}}">
+                                    <h3 class="icon-name-M">Creative & Post Production Services</h3>
+                                    <p>Enhancing and finalizing creative projects professionally</p>
+                                  </a>
+                                </li>
+
+                                <li>
+                                  <a class="cd-dropdown-item item-5" href="{{url('/video')}}">
+                                    <h3 class="icon-name-M">Additional Services</h3>
+                                    <p>Tailored solutions for diverse client needs</p>
+                                  </a>
+                                </li>
+
+                              </ul>
+                            </li>
+
+
+                            <li class="has-children">
+                              <a href="#" class="option-1">Projects</a>
+                              <p class="tab-discription">Creative endeavors in IT and film.</p>
+                              <ul class="cd-dropdown-icons is-hidden">
+
+                                <li class="see-all"><a href="{{url('/project')}}">Browse Services</a></li>
+                                <li>
+                                  <a class="cd-dropdown-item item-1" href="{{url('/project')}}">
+                                    <h3 class="icon-name-M">Portfolio</h3>
+                                    <p>Showcase of IT and film works</p>
+                                  </a>
+                                </li>
+
+                                <!-- <li>
                                 <a class="cd-dropdown-item item-2" href="./project-detail.html">
                                   <h3 class="icon-name-M">Project Details</h3>
                                   <p>This is the item description</p>
@@ -457,38 +469,38 @@
                               </li> -->
 
 
-                        </ul>
+                              </ul>
+                            </li>
+
+
+                          </ul> <!-- .cd-dropdown-content -->
+
+                        </nav>
+
+                      </li>
+                      <li>
+                        <a href="{{url('/contact')}}">Contact</a>
+                      </li>
+
+                      @if(request()->is('admin.*') || request()->is('admin.laravel.bytecraftstudios.in/*'))
+                      @php
+                      $currentHost = request()->getHost();
+                      if ($currentHost === 'admin.laravel.bytecraftstudios.in') {
+                      // Redirect to the desired URL
+                      echo '<script>
+                        window.location.href = "' . url('/admin/login') . '";
+                      </script>';
+                      exit;
+                      }
+                      @endphp
+                      @endif
+
+                      <li>
+                        <a href="{{ url('/admin/login') }}">Admin</a>
                       </li>
 
 
-                    </ul> <!-- .cd-dropdown-content -->
-
-                  </nav>
-
-                </li>
-                <li>
-                  <a href="{{url('/contact')}}">Contact</a>
-                </li>
-
-                <li>
-                  <a href="{{url('/blog')}}">Blog</a>
-                </li>
-
-                @if(request()->is('admin.*') || request()->is('admin.laravel.bytecraftstudios.in/*'))
-                @php
-                $currentHost = request()->getHost();
-                if ($currentHost === 'admin.laravel.bytecraftstudios.in') {
-                // Redirect to the desired URL
-                header('Location: ' . url('/admin/login'));
-                exit;
-                }
-                @endphp
-                <li>
-                  <a href="{{ url('/admin/login') }}">Admin</a>
-                </li>
-                @endif
-
-                </ul>
+                    </ul>
               </div>
             </mega>
             <!-- Main Menu End-->

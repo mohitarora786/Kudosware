@@ -17,13 +17,17 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone');
             $table->string('subject');
-            $table->string('job_role'); // For PDF/Image
-            $table->string('image')->nullable(); // For PDF/Imag
+            $table->string('job_role');
+            $table->string('image')->nullable();
             $table->string('status')->default('Pending');
+            $table->unsignedBigInteger('job_id'); // Ensure job_id is unsignedBigInteger
+
+            // Adding the foreign key constraint
+            $table->foreign('job_id')->references('id')->on('jobs')->onDelete('cascade');
+
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      */

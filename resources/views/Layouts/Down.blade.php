@@ -19,4 +19,23 @@
 <script src="{{ asset('js/jquery.menu-aim.js') }}"></script> <!-- menu aim -->
 <script src="{{ asset('js/Mega-menu.js') }}"></script> <!--mega menu -->
 </body>
+<script>
+      
+        document.addEventListener('DOMContentLoaded', function() {
+            const tocLinks = document.querySelectorAll('.toc-link');
+            const sections = Array.from(tocLinks).map(link => document.querySelector(link.getAttribute('href')));
+            
+            function onScroll() {
+                let index = sections.length;
+                
+                while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+                
+                tocLinks.forEach((link) => link.classList.remove('active'));
+                tocLinks[index].classList.add('active');
+            }
+            
+            window.addEventListener('scroll', onScroll);
+            onScroll(); // Call on scroll to highlight the right link on page load
+        });
+    </script>
 </html>
