@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('phone');
             $table->string('subject');
             $table->string('job_role');
-            $table->string('image')->nullable();
+            $table->string('image',300);
             $table->string('status')->default('Pending');
             $table->unsignedBigInteger('job_id'); // Ensure job_id is unsignedBigInteger
 

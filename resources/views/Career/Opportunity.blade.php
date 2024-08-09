@@ -83,12 +83,12 @@
 
 
 </style>
+
 <script>
     function setJobRole(event, jobTitle) {
         event.preventDefault();
-        const form = document.getElementById('contact-form');
-        form.job_role.value = jobTitle;
-        form.scrollIntoView();
+        localStorage.setItem('jobRole', jobTitle);
+        window.location.href = "/contact#contact-form";
     }
 </script>
 
@@ -166,7 +166,6 @@
         </div>
     </div>
 </section>
-
 
 <script>
   const jobsPerPage = 5;
@@ -269,14 +268,7 @@ function goToNextPage() {
     }
 }
 
-function setJobRole(event, jobTitle) {
-    event.preventDefault();
-    localStorage.setItem('jobRole', jobTitle);
-    window.location.href = "/contact#contact-form";
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     filterJobs(); // Initialize filtering and job count on page load
 });
-
 </script>

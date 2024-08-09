@@ -4,56 +4,60 @@ namespace App\Http\Controllers;
 
 use App\Models\Enquiry;
 use App\Models\Feedback;
+use App\Models\Job;
 use App\Models\Jobappointment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class ContactController extends Controller
 {
+
     public function store(Request $request)
     {
-        // Validate the request data
-        $validated = $request->validate([
+        // Validate common fields
+        $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
-            'phone' => 'required|string|max:20',
-            'subject' => 'required|string|max:255',
+            'phone' => 'required|string|max:15',
+            'subject' => 'required|string',
             'message' => 'nullable|string',
-            'file' => 'nullable|file|mimes:jpeg,png,jpg,gif,svg|max:2048', // Adjust validation as needed
-            'job_role' => 'nullable|string|max:255', // Only for job applications
+            'service_type' => 'nullable|string',
+            'technology' => 'nullable|string',
+            'job_role' => 'nullable|string', // Validate job_role for career
+            'file' => 'nullable|mimes:jpeg,png,jpg,gif,svg|max:2048', // Adjust file types and size as needed
         ]);
     
-        // Determine which model to use based on the subject
-        if ($request->subject === 'quote' || $request->subject === 'message') {
-            Feedback::create($validated);
-        } elseif ($request->subject === 'career') {
-            // Handle file upload
+        $data = $request->only(['name', 'email', 'phone', 'subject', 'message', 'service_type', 'technology', 'job_role']);
+    
+        // Handle file upload for career subject
+        if ($request->subject === 'career') {
+            // Fetch the job ID from the jobs table using the job_role
+            $job = Job::where('job_title', $request->job_role)->first();
+    
+            if (!$job) {
+                return redirect()->back()->withErrors(['job_role' => 'Invalid job role selected.']);
+            }
+    
+            $data['job_id'] = $job->id;
+    
+            // Handle file upload if file is present
             if ($request->hasFile('file')) {
-                $filePath = $request->file('file')->store('job_applications', 'public');
-                $validated['image'] = $filePath; // Store file path in 'image' field
+                $fileName = time() . '.' . $request->file->extension();
+                $request->file->move(public_path('uploads'), $fileName);
+                $data['image'] = $fileName;
             }
     
-            // Find job ID based on job_role
-            if (!empty($validated['job_role'])) {
-                $job = DB::table('jobs')
-                    ->where('job_title', $validated['job_role'])
-                    ->first();
+            // Set additional fields specific to the job appointment
+            $data['status'] = 'pending';
     
-                if ($job) {
-                    $validated['job_id'] = $job->id;
-                } else {
-                    // Optionally, handle the case where the job is not found
-                    return redirect()->back()->with('error', 'Job role not found.');
-                }
-            }
-    
-            Jobappointment::create($validated);
-        } else {
-            Enquiry::create($validated);
+            // Store in jobappointments table
+            JobAppointment::create($data);
+        } elseif ($request->subject === 'quote') {
+            Enquiry::create($data);
+        } elseif ($request->subject === 'message') {
+            Feedback::create($data);
         }
     
-        // Redirect or return a response
-        return redirect()->back()->with('success', 'Your message has been sent successfully!');
+        return redirect()->back()->with('success', 'Your message has been sent successfully.');
     }
-    
     }

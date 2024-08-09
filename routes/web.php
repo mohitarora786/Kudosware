@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () { return view('MainPage.MainPage');});
+Route::get('/', function (Request $request) {
+    $currentHost = $request->getHost();
+
+    if ($currentHost === 'admin.laravel.bytecraftstudios.in') {
+        return redirect('/admin/login');
+    }
+
+    return view('MainPage.MainPage');
+});
 Route::get('/abouts', function () { return view('About.About');})->name('about');
 Route::get('/about', function () { return view('About.About');})->name('about');
 Route::get('/service', function () { return view('Service.Service');});
@@ -24,7 +33,7 @@ Route::get('/project', function () { return view('Project.Project');});
 Route::get('/career', function () { return view('Career.Career');});
 Route::get('/webdevelopment', function () { return view('Developments.Webdevelopemnt.Web');});
 Route::get('/webdesign', function () { return view('Developments.Webdesign.Webdesign');});
-Route::get('/mobiledevelopment', function () { return view('Developments.Mobiledevelopemnt.Mobiledevelopment');});
+Route::get('/mobiledevelopment', function () { return view('Developments.MobileDevelopemnt.Mobiledevelopment');});
 Route::get('/softwaredevelopment', function () { return view('Developments.Softwaredevelopemnt.Softwaredevelopment');});
 Route::get('/digitalmarketing', function () { return view('Developments.DigitalMarketing.Digitalmarket');});
 Route::get('/seo', function () { return view('Developments.DigitalMarketing.Seo.Seo');});
@@ -37,7 +46,7 @@ Route::get('/emailmarketing', function () { return view('Developments.DigitalMar
 Route::get('/ppcadvertising', function () { return view('Developments.DigitalMarketing.PPCadvertising.PPC');});
 Route::get('/itSupport', function () { return view('Developments.itsupport.index');});
 Route::get('/itconsulting', function () { return view('Developments.itsupport.Itconsulting.ITCONSULTING');});
-Route::get('/itsupports', function () { return view('Developments.itsupport.ITSUPPORT.itsupport');});
+Route::get('/itsupports', function () { return view('Developments.itsupport.ITSUPPORT.Itsupport');});
 Route::get('/cloudserbices', function () { return view('Developments.itsupport.Cloudservices.Cloudservices');});
 Route::get('/business', function () { return view('Developments.itsupport.Business.Business');});
 Route::get('/virtualcto', function () { return view('Developments.itsupport.VirtualCto.Virtualcto');});
@@ -47,7 +56,7 @@ Route::get('/aimachinelearning', function () { return view('Developments.Dataser
 Route::get('/bigdatasolutions', function () { return view('Developments.Dataservices.BigData.BigData');});
 Route::get('/dataanalytics', function () { return view('Developments.Dataservices.DataAnalysts.DataAnalysts');});
 Route::get('/datamanagement', function () { return view('Developments.Dataservices.DataManagement.DataManagement');});
-Route::get('/datascienceconsulting', function () { return view('Developments.Dataservices.DataScience.DataScience');});
+Route::get('/datascienceconsulting', function () { return view('Developments.Dataservices.DataScience.Datascience');});
 Route::get('/edgecomputing', function () { return view('Developments.Dataservices.EdgeComputing.Edgecomputing');});
 Route::get('/marketing', function () { return view('FilmServices.Distribution.Distribution');});
 Route::get('/postproduction', function () { return view('FilmServices.PostProduction.Postproduction');});
@@ -81,3 +90,4 @@ Route::get('/NAS', function () { return view('NAS.Network');});
 Route::get('/blog', function () { return view('Blogs.Blog');});
 Route::get('/blog-detail', function () { return view('Blogs.BlogDetail.Blogdetail');});
 Route::get('/project-detail', function () { return view('Project.ProjectDetail.ProjectDetail');});
+Route::get('/AdditionalService', function () { return view('AdditionalService.Film');});

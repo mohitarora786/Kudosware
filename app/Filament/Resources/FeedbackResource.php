@@ -20,6 +20,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\DB;
+
 class FeedbackResource extends Resource
 {
     protected static ?string $model = Feedback::class;
@@ -43,7 +44,7 @@ class FeedbackResource extends Resource
                                             ->label('Name')
                                             ->required()
                                             ->columnSpan(1),
-                                        
+
                                         TextInput::make('email')
                                             ->label('Email')
                                             ->required()
@@ -53,7 +54,7 @@ class FeedbackResource extends Resource
                             ])
                             ->columns(1)
                             ->heading('User Credentials'),
-                        
+
                         // Section: Feedback Details
                         Card::make()
                             ->schema([
@@ -63,7 +64,7 @@ class FeedbackResource extends Resource
                                             ->label('Phone')
                                             ->required()
                                             ->columnSpan(1),
-                                        
+
                                         TextInput::make('subject')
                                             ->label('Subject')
                                             ->required()
@@ -72,7 +73,7 @@ class FeedbackResource extends Resource
                             ])
                             ->columns(1)
                             ->heading('Feedback Details'),
-                        
+
                         // Section: Your Feedback
                         Card::make()
                             ->schema([
@@ -91,8 +92,8 @@ class FeedbackResource extends Resource
                     ->heading('Feedback Form'),
             ]);
     }
-    
-    
+
+
 
     public static function table(Table $table): Table
     {
@@ -101,24 +102,27 @@ class FeedbackResource extends Resource
                 // Define your columns here
                 TextColumn::make('name')
                     ->label('Name')
-                  
+
                     ->searchable(),
-                
+
                 TextColumn::make('email')
                     ->label('Email')
-                   
+
                     ->searchable(),
-    
+
                 TextColumn::make('phone')
                     ->label('Phone')
-                   
+
                     ->searchable(),
-                    TextColumn::make('message')
-                    ->label('Feedback')
-                   ,
-                
-                TextColumn::make('created_at')
-                    ->label('Commentede At')
+                TextColumn::make('service_type')
+                    ->label('Service Type'),
+                TextColumn::make('technology')
+                    ->label('Technology'),
+                TextColumn::make('message')
+                    ->label('Feedback'),
+
+                TextColumn::make('updated_at')
+                    ->label('Commented At')
                     ->dateTime('d M Y') // Format as Day Month Year (e.g., 12 Jan 2024)
                     ->sortable(),
             ])
@@ -141,7 +145,7 @@ class FeedbackResource extends Resource
                 ]),
             ]);
     }
-    
+
 
     public static function getRelations(): array
     {

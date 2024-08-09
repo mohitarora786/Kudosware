@@ -1,26 +1,26 @@
 <section class="cta-one">
-      <div class="auto-container">
+    <div class="auto-container">
         <div class="d-flex justify-content-between align-items-center flex-wrap">
-          <div class="left-box">
-            <h3 class="cta-one_heading">
-              Looking for the Best IT Business Solutions?
-            </h3>
-            <div class="cta-one_text">
-              As a app web crawler expert, We will help to organize.
+            <div class="left-box">
+                <h3 class="cta-one_heading">
+                    Looking for the Best IT Business Solutions?
+                </h3>
+                <div class="cta-one_text">
+                    As a app web crawler expert, We will help to organize.
+                </div>
             </div>
-          </div>
-          <div class="button-box">
-            <a class="btn-style-three get-btn theme-btn btn-item" href="{{url('/contact')}}">
-              <div class="btn-wrap">
-                <span class="text-one">View Portfolio </span>
-                <span class="text-two">View Portfolio </span>
-              </div>
-            </a>
-          </div>
+            <div class="button-box">
+                <a class="btn-style-three get-btn theme-btn btn-item" href="{{url('/contact')}}">
+                    <div class="btn-wrap">
+                        <span class="text-one">View Portfolio </span>
+                        <span class="text-two">View Portfolio </span>
+                    </div>
+                </a>
+            </div>
         </div>
-      </div>
-  </div>
-  </section>
+    </div>
+    </div>
+</section>
 <footer class="main-footer bg-dark">
     <div class="auto-container">
         <!-- Widgets Section -->
@@ -101,7 +101,7 @@
                         <ul class="contact-list">
                             <li><span class="icon"><i class="fa-solid fa-phone"></i></span> +91 8668367265</li>
                             <li><span class="icon"><i class="fa-solid fa-location-dot"></i></span> Pune, Maharashtra, India</li>
-                            <li><span class="icon"><i class="fa-solid fa-envelope"></i></span> bytecraftwebsolutions@gmail.com</li>
+                            <li><span class="icon"><i class="fa-solid fa-envelope"></i></span> bytecraft@gmail.com</li>
                         </ul>
                         <!-- Social Box -->
                         <ul class="social-box">
@@ -111,8 +111,13 @@
                             <li>
                                 <a href="https://www.instagram.com/bytecraftstudios" class="fa-brands fa-instagram"></a>
                             </li>
+                            <li>
+                                <a href="https://www.facebook.com/" class="fa-brands fa-facebook fa-fw"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/" class="fa-brands fa-youtube fa-fw"></a>
+                            </li>
                         </ul>
-                        <!-- End Social Box -->
                     </div>
                 </div>
             </div>
@@ -129,12 +134,12 @@
 <div class="search-popup">
     <div class="color-layer"></div>
     <button class="close-search">
-      <span class="flaticon-020-x-mark"></span>
+        <span class="flaticon-020-x-mark"></span>
     </button>
     <form action="#" method="POST">
-      <div class="form-group">
-        <input type="search" name="search-field" value="" placeholder="Search Here" required="" />
-        <button type="submit"><i class="flaticon-001-loupe"></i></button>
-      </div>
+        <div class="form-group">
+            <input type="search" name="search-field" value="" placeholder="Search Here" required="" />
+            <button type="submit"><i class="flaticon-001-loupe"></i></button>
+        </div>
     </form>
-  </div>
+</div>

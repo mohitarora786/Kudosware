@@ -16,6 +16,8 @@ class Feedback extends Model
         'phone',
         'subject',
         'message',
-      
+        'service_type',
+        'technology',
     ];
+    
 }

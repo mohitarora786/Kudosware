@@ -18,9 +18,12 @@ return new class extends Migration
             $table->string('phone');
             $table->string('subject');
             $table->text('message');
+            $table->string('service_type')->nullable();
+            $table->string('technology')->nullable();
             $table->timestamps();
         });
     }
+    
 
     /**
      * Reverse the migrations.

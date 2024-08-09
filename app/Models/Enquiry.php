@@ -16,5 +16,8 @@ class Enquiry extends Model
         'phone',
         'subject',
         'message',
+        'service_type',
+        'technology',
     ];
+    
 }
