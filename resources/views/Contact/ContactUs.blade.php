@@ -98,8 +98,8 @@
                                     </select>
                                 </div>
                                 <div id="file-upload" class="col-lg-6 col-md-12 col-sm-12 form-group hide">
-                                    <label for="file">Choose an image</label>
-                                    <input type="file" name="file" id="file" onchange="displayFileName()">
+                                    <label for="file">Upload CV (Image)*</label>
+                                    <input type="file" name="file" id="file" onchange="displayFileName()" required>
                                     <p id="file-name" style="margin-top: 10px;"></p>
                                 </div>
                                 <div id="job-role-field" class="col-lg-6 col-md-12 col-sm-12 form-group hide">

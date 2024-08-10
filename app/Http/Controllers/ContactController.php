@@ -42,10 +42,16 @@ class ContactController extends Controller
     
             // Handle file upload if file is present
             if ($request->hasFile('file')) {
-                $fileName = time() . '.' . $request->file->extension();
-                $request->file->move(public_path('uploads'), $fileName);
+                $file = $request->file('file');
+                $fileName = time() . '.' . $file->extension();
+            
+                // Store file in the 'public/uploads' directory
+                $path = $file->storeAs('uploads', $fileName, 'public');
+            
+                // Save the file name in the database (adjust as needed)
                 $data['image'] = $fileName;
             }
+            
     
             // Set additional fields specific to the job appointment
             $data['status'] = 'pending';
