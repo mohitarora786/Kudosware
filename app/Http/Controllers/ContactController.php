@@ -11,59 +11,79 @@ use Illuminate\Support\Facades\DB;
 
 class ContactController extends Controller
 {
-
-    public function store(Request $request)
+        public function store(Request $request)
     {
-        // Validate common fields
-        $request->validate([
+        // Common validation rules
+        $commonRules = [
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'phone' => 'required|string|max:15',
             'subject' => 'required|string',
-            'message' => 'nullable|string',
-            'service_type' => 'nullable|string',
-            'technology' => 'nullable|string',
-            'job_role' => 'nullable|string', // Validate job_role for career
-            'file' => 'nullable|mimes:jpeg,png,jpg,gif,svg|max:2048', // Adjust file types and size as needed
-        ]);
+        ];
+
+        // Validate based on subject
+        switch ($request->input('subject')) {
+            case 'career':
+                // Validation for career
+                $validatedData = $request->validate(array_merge($commonRules, [
+                    'job_role' => 'required|string|max:255',
+                    'file' => 'nullable|file|mimes:jpg,png,pdf|max:2048', // Validating file
+                ]));
+
+                // Ensure 'job_id' is set based on job_role
+                $jobRole = $request->input('job_role');
+                $job = Job::where('job_title', $jobRole)->first();
+
+                if ($job) {
+                    $validatedData['job_id'] = $job->id;
+                } else {
+                    return redirect()->back()->with('error', 'Invalid job role selected.');
+                }
+
+                // Handle file upload
+                if ($request->hasFile('file')) {
+                    $file = $request->file('file');
+                    $fileName = time() . '_' . $file->getClientOriginalName();
+                    $file->storeAs('uploads', $fileName, 'public');
+                    $validatedData['image'] = $fileName;
+                }
     
-        $data = $request->only(['name', 'email', 'phone', 'subject', 'message', 'service_type', 'technology', 'job_role']);
-    
-        // Handle file upload for career subject
-        if ($request->subject === 'career') {
-            // Fetch the job ID from the jobs table using the job_role
-            $job = Job::where('job_title', $request->job_role)->first();
-    
-            if (!$job) {
-                return redirect()->back()->withErrors(['job_role' => 'Invalid job role selected.']);
-            }
-    
-            $data['job_id'] = $job->id;
-    
-            // Handle file upload if file is present
-            if ($request->hasFile('file')) {
-                $file = $request->file('file');
-                $fileName = time() . '.' . $file->extension();
-            
-                // Store file in the 'public/uploads' directory
-                $path = $file->storeAs('uploads', $fileName, 'public');
-            
-                // Save the file name in the database (adjust as needed)
-                $data['image'] = $fileName;
-            }
-            
-    
-            // Set additional fields specific to the job appointment
-            $data['status'] = 'pending';
-    
-            // Store in jobappointments table
-            JobAppointment::create($data);
-        } elseif ($request->subject === 'quote') {
-            Enquiry::create($data);
-        } elseif ($request->subject === 'message') {
-            Feedback::create($data);
+
+                // Set 'status' for the career
+                $validatedData['status'] = 'pending'; // Example status
+
+                // Store in Career model
+                Jobappointment::create($validatedData);
+                break;
+
+            case 'message':
+                // Validation for message
+                $validatedData = $request->validate(array_merge($commonRules, [
+                    'message' => 'required|string',
+                    'service_type' => 'nullable|string',
+                    'technology' => 'nullable|string',
+                ]));
+
+                // Store in Feedback model
+                Feedback::create($validatedData);
+                break;
+
+            case 'quote':
+                // Validation for quote
+                $validatedData = $request->validate(array_merge($commonRules, [
+                    'message' => 'nullable|string',
+                    'service_type' => 'required|string',
+                    'technology' => 'required|string',
+                ]));
+
+                // Store in Enquiry model
+                Enquiry::create($validatedData);
+                break;
+
+            default:
+                return redirect()->back()->with('error', 'Invalid subject selected.');
         }
-    
-        return redirect()->back()->with('success', 'Your message has been sent successfully.');
+
+        return redirect()->back()->with('success', 'Your message has been sent successfully!');
     }
     }

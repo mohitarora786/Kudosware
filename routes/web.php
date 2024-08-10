@@ -92,4 +92,3 @@ Route::get('/blog', function () { return view('Blogs.Blog');});
 Route::get('/blog-detail', function () { return view('Blogs.BlogDetail.Blogdetail');});
 Route::get('/project-detail', function () { return view('Project.ProjectDetail.ProjectDetail');});
 Route::get('/AdditionalService', function () { return view('AdditionalService.Film');});
-Route::get('/success', [SucessController::class, 'showSuccessPage'])->name('success.page');
