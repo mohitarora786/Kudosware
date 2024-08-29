@@ -15,10 +15,11 @@
             <div class="team_one col-lg-3 col-md-6 col-sm-12">
                 <div class="team_one-inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
                     <div class="team_one-image">
-                        <img src="{{ asset('images/resource/team-1.webp') }}" alt="" />
+                    <img src="{{ asset('images/profile.jpg') }}" alt="" style="height: 350px;" />
+
                         <div class="team_one-content">
                             <h5 class="team-one_title">
-                                <a href="team-detail.html">Dhiraj Zope</a>
+                                <a href="team-detail.html">Mr . X</a>
                             </h5>
                             <div class="team-one_designation">Founder & CEO</div>
                         </div>
@@ -33,10 +34,10 @@
                     <!-- Social Box -->
                     <ul class="team-one_social">
                         <li>
-                            <a href="https://www.linkedin.com/in/dhiru805/" class="fa-brands fa-linkedin fa-fw"></a>
+                            <a href="https://www.linkedin.com/company/kudosware/" class="fa-brands fa-linkedin fa-fw"></a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/dhiru_805" class="fa-solid fa-instagram fa-fw"></a>
+                            <a href="" class="fa-solid fa-instagram fa-fw"></a>
                         </li>
                     </ul>
                 </div>

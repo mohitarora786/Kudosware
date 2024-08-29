@@ -7,7 +7,7 @@
             <div class="sec-title_two-title">~ Our Case Studies ~</div>
             <h2 class="sec-title_two-heading">
                 Technology Is <span>Transforming</span> <br />
-                Every IT Sector & Film Industry
+                Every IT Sector 
             </h2>
         </div>
 

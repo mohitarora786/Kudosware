@@ -13,7 +13,7 @@
                 <!-- Counter Column -->
                 <div class="counter-two_block col-lg-3 col-md-6 col-sm-6">
                     <div class="counter-two_counter">
-                        <span class="odometer" data-count="2020"></span>
+                        <span class="odometer" data-count="2023"></span>
                     </div>
                     <div class="counter-two_text">Year of Establishment</div>
                 </div>

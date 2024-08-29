@@ -10,7 +10,7 @@
                 </div>
             </div>
             <div class="button-box">
-                <a class="btn-style-three get-btn theme-btn btn-item" href="{{url('/contact')}}">
+                <a class="btn-style-three get-btn theme-btn btn-item" href="{{url('/project')}}">
                     <div class="btn-wrap">
                         <span class="text-one">View Portfolio </span>
                         <span class="text-two">View Portfolio </span>
@@ -31,7 +31,7 @@
                     <div class="footer-widget logo-widget">
                         <div class="logo foot-logo">
                             <a href="{{ url('/') }}">
-                                <img src="{{ asset('images/Bytecraft Logo FOG1.png') }}" alt="" />
+                                <img src="{{ asset('images/logo.jpg') }}" alt="" />
                             </a>
                         </div>
                         <div class="text">
@@ -76,46 +76,28 @@
                     </div>
                 </div>
 
-                <!-- Footer Column 4 -->
-                <div id="filmservice" class="footer-column col-lg-3 col-md-6 col-sm-12">
-                    <div class="footer-widget filmservices-widget">
-                        <h4>Film Services</h4>
-                        <div class="text">
-                            <div class="menu">
-                                <ul class="list-unstyled">
-                                    <li><a href="{{ url('/preproduction') }}">Pre-Production</a></li>
-                                    <li><a href="{{ url('/production') }}">Production</a></li>
-                                    <li><a href="{{ url('/postproduction') }}">Post-Production</a></li>
-                                    <li><a href="{{ url('/marketing') }}">Distribution & Marketing</a></li>
-                                    <li><a href="{{ url('/video') }}">Video Production</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Footer Column 5 -->
                 <div id="para" class="footer-column col-lg-3 col-md-6 col-sm-12">
                     <div class="footer-widget contact-widget">
                         <h4>Official info:</h4>
                         <ul class="contact-list">
-                            <li><span class="icon"><i class="fa-solid fa-phone"></i></span> +91 8668367265</li>
-                            <li><span class="icon"><i class="fa-solid fa-location-dot"></i></span> Pune, Maharashtra, India</li>
-                            <li><span class="icon"><i class="fa-solid fa-envelope"></i></span> bytecraft@gmail.com</li>
+                            <li><span class="icon"><i class="fa-solid fa-phone"></i></span> +91 XXXXXXXXX</li>
+                            <li><span class="icon"><i class="fa-solid fa-location-dot"></i></span> Indore, Madhya Pradesh, India</li>
+                            <li><span class="icon"><i class="fa-solid fa-envelope"></i></span>mohit.joshi@kudosware.com</li>
                         </ul>
                         <!-- Social Box -->
                         <ul class="social-box">
                             <li>
-                                <a href="https://www.linkedin.com/company/bytecraft-studios" class="fa-brands fa-linkedin fa-fw"></a>
+                                <a href="https://www.linkedin.com/company/kudosware/" class="fa-brands fa-linkedin fa-fw"></a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/bytecraftstudios" class="fa-brands fa-instagram"></a>
+                                <a href="" class="fa-brands fa-instagram"></a>
                             </li>
                             <li>
-                                <a href="https://www.facebook.com/" class="fa-brands fa-facebook fa-fw"></a>
+                                <a href="" class="fa-brands fa-facebook fa-fw"></a>
                             </li>
                             <li>
-                                <a href="https://www.youtube.com/" class="fa-brands fa-youtube fa-fw"></a>
+                                <a href="" class="fa-brands fa-youtube fa-fw"></a>
                             </li>
                         </ul>
                     </div>
@@ -127,7 +109,7 @@
     <!-- Footer Bottom -->
     <div class="footer-bottom">
         <div class="copyright">
-            2023 &copy; All rights reserved by <a href="#">ByteCraftStudios</a>
+            2024 &copy; All rights reserved by Mohit Arora
         </div>
     </div>
 </footer>

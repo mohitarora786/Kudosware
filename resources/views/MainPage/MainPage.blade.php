@@ -7,7 +7,6 @@
 @include('MainPage.Casestudy')
 @include('MainPage.WhyChoose')
 @include('MainPage.Test')
-@include('MainPage.Pricing')
 @include('MainPage.Testinmial')
 </div>
 @include('MainPage.Footer')

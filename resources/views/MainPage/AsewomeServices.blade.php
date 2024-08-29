@@ -20,13 +20,11 @@
               <div class="sec-title_two">
                 <div class="sec-title_two-title">~ About Our Company ~</div>
                 <h2 class="sec-title_two-heading">
-                  Choose <span>The Best</span> IT &<br />
-                  Film Service Company
+                  Choose <span>The Best</span> IT <br />
                 </h2>
               </div>
               <div class="about-two_text">
-                We offer innovative solutions in software development, cloud computing, and cybersecurity, alongside
-                creating captivating films from concept to screen.
+                We offer innovative solutions in software development, cloud computing, and cybersecurity
               </div>
               <div class="about-two_feature">
                 <div class="row clearfix">
@@ -70,7 +68,7 @@
                 <div class="about-phone_box">
                   <span class="about-phone_icon fa-solid fa-phone fa-fw"></span>
                   Call for help <br />
-                  <a class="about-two_phone-number" href="tel:+91 866 8367 265">+91 866 8367 265</a>
+                  <a class="about-two_phone-number" href="tel:+91 XXX XXX XXX">+91 XXX XXX XXX</a>
                 </div>
               </div>
             </div>

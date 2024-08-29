@@ -12,7 +12,7 @@
                             We are Business Solution
                         </div>
                         <h1 class="slider-two_heading">
-                            Weaving Digital Success, Crafting Innovations in IT and Film
+                            Weaving Digital Success, Crafting Innovations in IT 
                         </h1>
                         <div class="slider-two_text">
                             We place you at the centre of international networks to

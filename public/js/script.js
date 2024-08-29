@@ -721,29 +721,31 @@
 	
 	
 	$(document).ready(function() {
-	//Contact Form Validation
-	if($('#contact-form').length){
-		$('#contact-form').validate({
-			rules: {
-				username: {
-					required: true
-				},
-				phone: {
-					required: true
-				},
-				services: {
-					required: true
-				},
-				email: {
-					required: true
-				},
-				message: {
-					required: true
+		// Contact Form Validation
+		if ($('#contact-form').length) {
+			$('#contact-form').validate({
+				rules: {
+					username: {
+						required: true
+					},
+					phone: {
+						required: true
+					},
+					services: {
+						required: true
+					},
+					email: {
+						required: true,
+						email: true // Added email validation rule to ensure a valid email format
+					},
+					message: {
+						required: true
+					}
 				}
-			}
-		});
-	}
-});
+			});
+		}
+	}); // Closing parenthesis for $(document).ready
+	
 	
 	
 	// Scroll to a Specific Div

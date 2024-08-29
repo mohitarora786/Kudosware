@@ -18,34 +18,35 @@
         <!-- Info List -->
         <ul class="info-list">
           <li>
-            <a href="tel:+91 866-8367-265"><span class="icon fa-solid fa-phone fa-fw"></span><span>+91
-                8668 36 7265</span></a>
+            <a href="tel:+91 XXX-XXX-XXX"><span class="icon fa-solid fa-phone fa-fw"></span><span>+91
+                XXXXXXXXX</span></a>
           </li>
           <li>
-            <a href="mailto:bytecrafts@gmail.com">
+            <a href="mailto:mohit.joshi@kudosware.com">
               <span class="icon fa-solid fa-envelope fa-fw"></span>
-              <span>bytecrafts@gmail.com</span>
+              <span>mohit.joshi@kudosware.com</span>
             </a>
 
           </li>
           <li>
-            <a href=""><span class="icon fa-solid fa-map fa-fw"></span><span>Pune, Maharashtra, India</span></a>
+            <a href=""><span class="icon fa-solid fa-map fa-fw"></span><span> M.G. Road, Manoramaganj, , INDORE, Madhya Pradesh, India - 452001.
+            </span></a>
           </li>
         </ul>
 
         <!-- Social Box -->
         <ul class="header-social_box">
     <li>
-        <a href="https://www.linkedin.com/company/bytecraft-studios/people/" class="fa-brands fa-linkedin fa-fw"></a>
+        <a href="https://www.linkedin.com/company/kudosware/" class="fa-brands fa-linkedin fa-fw"></a>
     </li>
     <li>
-        <a href="https://www.instagram.com/bytecraftstudios?igsh=MWZkZzZscmN6ZnI3cg==" class="fa-solid fa-instagram fa-fw"></a>
+        <a href="" class="fa-solid fa-instagram fa-fw"></a>
     </li>
     <li>
         <a href="https://www.facebook.com/" class="fa-brands fa-facebook fa-fw"></a>
     </li>
     <li>
-        <a href="https://www.youtube.com/channel/UCXXXXXX" class="fa-brands fa-youtube fa-fw"></a>
+        <a href="https://www.youtube.com/" class="fa-brands fa-youtube fa-fw"></a>
     </li>
 </ul>
 
@@ -61,7 +62,10 @@
       <div class="inner-container d-flex">
         <!-- Logo Box -->
         <div class="logo">
-          <a href="/"><img src="images/Bytecraft Logo HOG1.png" alt="" title="" /></a>
+        <a href="/">
+    <img src="images/logo.jpg" alt="" title="" style="height: 50px; width: 200px; background-color: grey;" />
+</a>
+
         </div>
 
         <!-- Upper Right -->
@@ -178,66 +182,7 @@
                           </li>
                         </ul>
                       </li>
-
-                      <li class="dropdown">
-
-                        <a href="">Film Production Services</a>
-
-                        <ul class="Ul-mobile-view">
-                          <li>
-                            <a class="background-icon icon-1" href="{{url('/preproduction')}}">
-                              <a class="icon-for-mobile " href="{{url('/preproduction')}}" style='line-height:1px'>Pre-Production Services</a>
-                              <p class="discription-mobile">Planning and preparing for creative projects</p>
-                            </a>
-                          </li>
-                          <li>
-                            <a class="background-icon icon-2" href="{{url('/production')}}">
-                              <a class="icon-for-mobile " href="{{url('/production')}}" style='line-height:1px'>Production Services</a>
-                              <p class="discription-mobile">Executing creative vision with logistical precision</p>
-                            </a>
-                          </li>
-                          <li>
-                            <a class="background-icon icon-3" href="{{url('/postproduction')}}">
-                              <a class="icon-for-mobile " href="{{url('/postproduction')}}" style='line-height:1px'>Post-Production Services</a>
-                              <p class="discription-mobile">Refining and enhancing creative content seamlessly</p>
-                            </a>
-                          </li>
-                          <li>
-                            <a class="background-icon icon-4" href="{{url('/marketing')}}">
-                              <a class="icon-for-mobile " href="{{url('/marketing')}}" style='line-height:1px'>Distribution & Marketing
-                                Services</a>
-                              <p class="discription-mobile">Promoting and delivering content effectively worldwide
-                              </p>
-                            </a>
-                          </li>
-                          <li>
-                            <a class="background-icon icon-6" href="{{url('/video')}}">
-                              <a class="icon-for-mobile " href="{{url('/video')}}" style='line-height:1px'>Video Production Services</a>
-                              <p class="discription-mobile">Crafting visual stories with professional expertise</p>
-                            </a>
-                          </li>
-                          <li>
-                            <a class="background-icon icon-7" href="{{url('/photography')}}">
-                              <a class="icon-for-mobile " href="{{url('/photography')}}" style='line-height:1px'>Photography Services</a>
-                              <p class="discription-mobile"> Capturing moments with artistic precision</p>
-                            </a>
-                          </li>
-                          <!-- <li>
-                                <a class="background-icon icon-8" href="./creative-post-production-services.html">
-                                  <a class="icon-for-mobile " href="./creative-post-production-services.html"
-                                    style='line-height:1px'>Creative & Post-Production
-                                    Services</a>
-                                  <p class="discription-mobile">Enhancing and finalizing creative projects professionally</p>
-                                </a>
-                              </li> -->
-                          <li>
-                            <a class="background-icon icon-5" href="{{url('/AdditionalService')}}">
-                              <a class="icon-for-mobile " href="{{url('/AdditionalService')}}" style='line-height:1px'>Additional Services</a>
-                              <p class="discription-mobile">Tailored solutions for diverse client needs</p>
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
+                      
 
                       <li class="dropdown">
 
@@ -312,12 +257,6 @@
                             </a>
                           </li>
 
-                          <li>
-                            <a class="cd-dropdown-item item-2" href="{{url('/service#prod-winner')}}">
-                              <h3 class="icon-name-M">Film Production Services</h3>
-                              <p>Facilitating every Filmmaking need seamlessly</p>
-                            </a>
-                          </li>
 
                         </ul>
                       </li> <!-- .has-children -->
@@ -391,70 +330,6 @@
                         </ul>
                       </li>
 
-                      <li class="has-children">
-                        <a href="#" class="option-1">Film Production Services</a>
-                        <p class="tab-discription">Facilitating every Filmmaking need seamlessly</p>
-                        <ul class="cd-dropdown-icons is-hidden">
-
-                          <li class="see-all"><a href="{{url('/service#prod-winner')}}">Browse Film Services</a></li>
-                          <li>
-                            <a class="cd-dropdown-item item-1" href="{{url('/preproduction')}}">
-                              <h3 class="icon-name-M">Pre-Production Services</h3>
-                              <p>Planning and preparing for creative projects</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-2" href="{{url('/production')}}">
-                              <h3 class="icon-name-M">Production Services</h3>
-                              <p>Executing creative vision with logistical precision</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-3" href="{{url('/postproduction')}}">
-                              <h3 class="icon-name-M">Post-Production Services</h3>
-                              <p>Refining and enhancing creative content seamlessly</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-4" href="{{url('/marketing')}}">
-                              <h3 class="icon-name-M">Distribution & Marketing Services</h3>
-                              <p>Promoting and delivering content effectively worldwide</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-6" href="{{url('/video')}}">
-                              <h3 class="icon-name-M">Video Production Services</h3>
-                              <p>Crafting visual stories with professional expertise</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-7" href="{{url('/photography')}}">
-                              <h3 class="icon-name-M">Photography Services</h3>
-                              <p>Capturing moments with artistic precision</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-8" href="{{url('/creatives')}}">
-                              <h3 class="icon-name-M">Creative & Post Production Services</h3>
-                              <p>Enhancing and finalizing creative projects professionally</p>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a class="cd-dropdown-item item-5" href="{{url('/AdditionalService')}}">
-                              <h3 class="icon-name-M">Additional Services</h3>
-                              <p>Tailored solutions for diverse client needs</p>
-                            </a>
-                          </li>
-
-                        </ul>
-                      </li>
 
 
                       <li class="has-children">
@@ -654,21 +529,6 @@
         keyword: 'software',
         text: 'Software Development',
         route: '/softwaredevelopment'
-      },
-      {
-        keyword: 'production',
-        text: 'Production Services',
-        route: '/production'
-      },
-      {
-        keyword: 'post',
-        text: 'Post Production Services',
-        route: '/postproduction'
-      },
-      {
-        keyword: 'pre',
-        text: 'Pre Production Services',
-        route: '/preproduction'
       },
       {
         keyword: 'photography',

@@ -76,12 +76,13 @@ class JobappointmentResource extends Resource
                         ->columns(3), // Three columns layout
     
                         // Third Section: Document Upload
-                        Section::make('Document Upload')
-                            ->schema([
-                                Forms\Components\FileUpload::make('image')
-                                    ->label('File')
-                                    ->required(),
-                            ])
+                        section::make('Document Upload')   
+                         ->schema([       
+                             Forms\Components\TextInput::make('image')       
+                                  ->label('Google Drive Link for CV')          
+                                    ->required()          
+                                  ->url() // Ensures the input is a valid URL  
+                                  ->placeholder('Paste your Google Drive link here'),    ])
                             ->columns(1), // Single column layout
                     ])
                     ->columns(1) // Single column layout for the parent section
@@ -120,12 +121,11 @@ class JobappointmentResource extends Resource
                     ])
                     ->default('Pending'),
                 
-                ImageColumn::make('image')
-                    ->label('Cv / Resume')
-                    ->disk('public') // Ensure this matches your disk configuration
-                    ->width(100) // Thumbnail width
-                    ->height(80) // Thumbnail height
-                    // ->defaultImage('default-image.png'), // Optional: Default image if file is missing
+                    TextColumn::make('image')
+                    ->label('CV / Resume')
+                    ->html() // Enables HTML rendering
+                    ->formatStateUsing(fn ($state) => $state ? "<a href=\"$state\" target=\"_blank\">View CV</a>" : 'No CV uploaded')
+                    ->wrap() // Optional: wraps text if necessary
             ])
             ->filters([
                 // Add filters if needed

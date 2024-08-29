@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="ByteCraft Studios - Weaving Digital Success, Crafting Innovations in IT and Film Production">
+    <meta name="description" content="Kudosware -  Crafting Innovations in IT ">
     <meta name="keywords" content="IT Services,Website Development,Cyber Security,Digital Marketing,Film Production Services,Photography Services">
     <!-- <meta name="author-1" content=""> -->
     <!-- <meta http-equiv="refresh" content="5"> -->
@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>
-        ByteCraft Studios - Weaving Digital Success, Crafting Innovations in IT and Film Production
+        Kudosware -  Crafting Innovations in IT 
     </title>
     <!-- Stylesheets -->
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">

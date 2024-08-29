@@ -5,8 +5,7 @@
         <div class="sec-title_two centered">
           <div class="sec-title_two-title">~ Our Awesome Services ~</div>
           <h2 class="sec-title_two-heading">
-            Choose <span>The Best</span> IT &<br />
-            Film Service Company
+            Choose <span>The Best</span> IT <br />
           </h2>
         </div>
 
@@ -26,14 +25,6 @@
                   <h5 class="service-block_three-heading alternate">
                     <a href="{{url('/ui-uxDesign')}}">UI/UX Design</a>
                   </h5>
-                  <!--<div class="button-box">
-                    <a class="btn-style-three get-btn theme-btn btn-item" href="#">
-                      <div class="btn-wrap">
-                        <span class="text-one">Learn More</span>
-                        <span class="text-two">learn More</span>
-                      </div>
-                    </a>
-                  </div> -->
                   <div class="button-box">
                     <a class="btn-style-three get-btn theme-btn btn-item" href="{{url('/ui-uxDesign')}}"
                       style="margin-top: 12px; padding:8px 12px">
@@ -141,144 +132,7 @@
               </div>
             </div>
 
-            <!-- Service Block One -->
-            <div class="service-block_three">
-              <div class="service-block_three-inner">
-                <span class="service-block_three-icon"><img src="images/icons/service-10.webp" alt="" /></span>
-                <h5 class="service-block_three-heading">
-                  <a href="{{url('/production')}}">Production Services</a>
-                </h5>
-                <div class="service-block_three-text"><a href="{{url('/production')}}">
-                  Production services encompass a comprehensive range of logistical and creative support activities essential for executing film, television.</a>
-                </div>
-                <div class="service-block_three-overlay">
-                  <div class="service-block_three-color-layer"></div>
-                  <span class="service-block_three-icon-two"><img src="images/icons/service-10-1.webp" alt="" /></span>
-                  <h5 class="service-block_three-heading alternate">
-                    <a href="{{url('/production')}}">Production Services</a>
-                  </h5>
-                  <div class="button-box">
-                    <a class="btn-style-three get-btn theme-btn btn-item" href="{{url('/production')}}"
-                      style="margin-top: 12px; padding:8px 12px">
-                      <div class="btn-wrap">
-                        <span class="text-one">Learn More</span>
-                        <span class="text-two">learn More</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Service Block One -->
-            <div class="service-block_three">
-              <div class="service-block_three-inner">
-                <span class="service-block_three-icon"><img src="images/icons/service-11.webp" alt="" /></span>
-                <h5 class="service-block_three-heading"><a href="{{url('/photography')}}">Photography</a></h5>
-                <div class="service-block_three-text"><a href="{{url('/photography')}}">
-                  Photography is the art and technique of capturing images using light-sensitive materials or digital sensors. It encompasses a diverse range of styles.</a>
-                </div>
-                <div class="service-block_three-overlay">
-                  <div class="service-block_three-color-layer"></div>
-                  <span class="service-block_three-icon-two"><img src="images/icons/service-11-1.webp" alt="" /></span>
-                  <h5 class="service-block_three-heading alternate">
-                    <a href="{{url('/photography')}}">Photography</a>
-                  </h5>
-                  <div class="button-box">
-                    <a class="btn-style-three get-btn theme-btn btn-item" href="{{url('/photography')}}"
-                      style="margin-top: 12px; padding:8px 12px">
-                      <div class="btn-wrap">
-                        <span class="text-one">Learn More</span>
-                        <span class="text-two">learn More</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Service Block One -->
-            <div class="service-block_three">
-              <div class="service-block_three-inner">
-                <span class="service-block_three-icon"><img src="images/icons/service-8.webp" alt="" /></span>
-                <h5 class="service-block_three-heading"><a href="{{url('/dataService')}}">Data Services</a></h5>
-                <div class="service-block_three-text"><a href="{{url('/dataService')}}">
-                  Data services encompass a broad spectrum of activities related to the acquisition, management, analysis, and utilization of data.</a>
-                </div>
-                <div class="service-block_three-overlay">
-                  <div class="service-block_three-color-layer"></div>
-                  <span class="service-block_three-icon-two"><img src="images/icons/service-8-1.webp" alt="" /></span>
-                  <h5 class="service-block_three-heading alternate">
-                    <a href="{{url('/dataService')}}">Data Services</a>
-                  </h5>
-                  <div class="button-box">
-                    <a class="btn-style-three get-btn theme-btn btn-item" href="{{url('/dataService')}}"
-                      style="margin-top: 12px; padding:8px 12px">
-                      <div class="btn-wrap">
-                        <span class="text-one">Learn More</span>
-                        <span class="text-two">learn More</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Service Block One -->
-            <div class="service-block_three">
-              <div class="service-block_three-inner">
-                <span class="service-block_three-icon"><img src="images/icons/service-9.webp" alt="" /></span>
-                <h5 class="service-block_three-heading"><a href="{{url('/NAS')}}">NAS</a></h5>
-                <div class="service-block_three-text"><a href="{{url('/NAS')}}">
-                  Network Attached Storage (NAS) is a storage device or server connected to a network that provides file-based data storage services.</a>
-                </div>
-                <div class="service-block_three-overlay">
-                  <div class="service-block_three-color-layer"></div>
-                  <span class="service-block_three-icon-two"><img src="images/icons/service-9-1.webp" alt="" /></span>
-                  <h5 class="service-block_three-heading alternate">
-                    <a href="{{url('/NAS')}}">Merchandising</a>
-                  </h5>
-                  <div class="button-box">
-                    <a class="btn-style-three get-btn theme-btn btn-item" href="{{url('/NAS')}}"
-                      style="margin-top: 12px; padding:8px 12px">
-                      <div class="btn-wrap">
-                        <span class="text-one">Learn More</span>
-                        <span class="text-two">learn More</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Service Block One -->
-            <div class="service-block_three">
-              <div class="service-block_three-inner">
-                <span class="service-block_three-icon"><img src="images/icons/service-10.webp" alt="" /></span>
-                <h5 class="service-block_three-heading">
-                  <a href="{{url('/video')}}">Video Production</a>
-                </h5>
-                <div class="service-block_three-text"><a href="{{url('/video')}}">
-                  Video production is the process of planning, scripting, filming, editing, and distributing video content for various purposes.</a>
-                </div>
-                <div class="service-block_three-overlay">
-                  <div class="service-block_three-color-layer"></div>
-                  <span class="service-block_three-icon-two"><img src="images/icons/service-10-1.webp" alt="" /></span>
-                  <h5 class="service-block_three-heading alternate">
-                    <a href="{{url('/video')}}">Video Production</a>
-                  </h5>
-                  <div class="button-box">
-                    <a class="btn-style-three get-btn theme-btn btn-item" href="{{url('/video')}}"
-                      style="margin-top: 12px; padding:8px 12px">
-                      <div class="btn-wrap">
-                        <span class="text-one">Learn More</span>
-                        <span class="text-two">learn More</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+        
 
             <!-- Service Block One -->
             <div class="service-block_three">

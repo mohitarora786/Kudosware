@@ -9,12 +9,10 @@
                             <div id="service-title">About us</div>
                         </div>
                         <h2 class="sec-title_heading">
-                            Choose <span>The Best</span> IT &<br />
-                            Film Service Company
+                            Choose <span>The Best</span> IT <br />
                         </h2>
                         <div class="sec-title_text">
-                            We offer innovative solutions in software development, cloud computing, and cybersecurity, alongside
-                            creating captivating films from concept to screen.
+                            We offer innovative solutions in software development, cloud computing, and cybersecurity
                         </div>
                     </div>
 
@@ -39,10 +37,8 @@
                                 <div class="tab active-tab" id="our-mission">
                                     <div class="content">
                                         <div class="text">
-                                            Driving Progress and Captivating Audiences: Our Commitment to Exceptional IT Services and
-                                            Compelling Film Productions.
-                                            Our mission is to deliver exceptional ITservices and compelling film productionsthat drive
-                                            progress and captivateaudiences.
+                                            Driving Progress and Captivating Audiences: Our Commitment to Exceptional IT Services.
+                                            Our mission is to deliver exceptional ITservices.
                                         </div>
                                     </div>
                                 </div>
